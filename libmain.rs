@@ -4,8 +4,7 @@
 //! number). Receivers at any other ring derive a different keystream, so the
 //! checksum fails and `open` returns `None`. The decay is the point.
 //!
-//! NOT real cryptography. SplitMix64 is invertible; do not protect anything
-//! that matters with this.
+//! NOT real cryptography. SplitMix64 is invertible.
 
 pub const TRITS: usize = 6; // 3^6 = 729 rings (-364..=364)
 pub const MAX_RING: i32 = 364;
